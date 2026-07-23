@@ -1,6 +1,9 @@
 # BRISAMARINA Landing Page
 
-Este repositorio contiene el código fuente para la landing page del proyecto BRISAMARINA.
+Este repositorio contiene el código fuente inicial para la landing page del proyecto BRISAMARINA.
+
+**Resumen del proyecto:** 
+Primer commit con el código base del sitio. Contiene la estructura inicial de la landing page para un restaurante de mariscos, incluyendo el diseño visual, la tipografía y la lógica principal para las animaciones de desplazamiento (scroll).
 
 ## Estructura del Proyecto
 

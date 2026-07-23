@@ -1,0 +1,183 @@
+/* Variables de color de la nueva paleta */
+:root {
+    --navy: #0F2027;           /* Azul oscuro muy elegante */
+    --ocean: #0077B6;          /* Azul vibrante del mar */
+    --ocean-light: #48CAE4;    /* Acentos celestes */
+    --light-blue: #F0F8FF;     /* Fondo gris/azulado súper claro */
+    --cta-color: #FF6B6B;      /* Coral vibrante para llamados a la acción (Incentivar Clic) */
+    --cta-hover: #E63946;      
+    --text-dark: #334155;
+}
+
+/* Tipografías */
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat, p, a, input, select, button, span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Configuraciones generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-dark);
+}
+
+/* Clases de colores personalizados */
+.text-navy { color: var(--navy) !important; }
+.text-ocean { color: var(--ocean) !important; }
+.text-ocean-light { color: var(--ocean-light) !important; }
+.text-cta { color: var(--cta-color) !important; }
+.bg-navy { background-color: var(--navy) !important; }
+.bg-light-blue { background-color: var(--light-blue) !important; }
+
+/* Navbar */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: var(--ocean) !important;
+}
+
+/* Botón de Llamado a la Acción (CTA) */
+.btn-cta {
+    background-color: var(--cta-color);
+    color: white;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--cta-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(230, 57, 70, 0.3);
+}
+
+.btn-outline-navy {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    font-weight: 600;
+}
+.btn-outline-navy:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+/* Hero Section (Fondo estático, mariscos/océano) */
+.hero {
+    height: 75vh;
+    min-height: 550px;
+    /* Gradiente oscuro sobre imagen de mariscos/mar para destacar el CTA */
+    background: linear-gradient(rgba(15, 32, 39, 0.65), rgba(15, 32, 39, 0.7)), 
+                url('https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 76px; 
+}
+
+.subtitle-font {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Divider debajo de títulos */
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--ocean);
+    margin-top: 15px;
+}
+
+/* Menú Estilo Lista */
+.menu-container {
+    border-top: 4px solid var(--ocean);
+}
+
+.menu-list-item {
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 15px;
+}
+
+.menu-list-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+}
+
+/* Testimonios */
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Formulario */
+.form-control, .form-select {
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--ocean);
+    box-shadow: 0 0 0 0.25rem rgba(0, 119, 182, 0.25);
+}
+
+/* WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ANIMACIONES AL HACER SCROLL (JS Observer) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px); /* El elemento empieza abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Sube a su posición original */
+}
+
+/* Ajuste de scroll */
+section:not(.hero) {
+    scroll-margin-top: 76px;
+}
