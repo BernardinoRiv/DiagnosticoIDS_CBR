@@ -34,7 +34,6 @@
                     <li class="nav-item"><a class="nav-link" href="#menu">Nuestro Menú</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonios">Reseñas</a></li>
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <!-- CTA principal en el menú -->
                         <a class="btn btn-cta rounded-pill px-4" href="#contacto">Reservar Mesa</a>
                     </li>
                 </ul>
@@ -42,12 +41,46 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container text-center text-white hero-content animate-on-scroll">
-            <h1 class="display-3 mb-3 title-font">El verdadero sabor del océano</h1>
-            <p class="lead mb-4 fw-light subtitle-font">Mariscos frescos, pesca del día y coctelería de autor frente al mar.</p>
-            <a href="#menu" class="btn btn-cta btn-lg rounded-pill px-5 shadow-lg">Ver el Menú</a>
+    <!-- Hero Section con Carrusel y Glassmorphism -->
+    <section id="inicio" class="hero-carousel-section position-relative">
+        <!-- Carrusel de Bootstrap (Fade) -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <!-- 
+                    INSTRUCCIÓN: Cambia el atributo src por la ruta o URL de tus imágenes.
+                    Asegúrate de usar imágenes horizontales de buena resolución. 
+                -->
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="img/home1.jpg" class="d-block w-100 hero-img" alt="Vista del restaurante">
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="img/home2.jpg" class="d-block w-100 hero-img" alt="Platillo especial">
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="img/Filete_de_Pescado_al_Ajo.jpg" class="d-block w-100 hero-img" alt="Ambiente">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Capa superpuesta y Contenido Alineado a la Izquierda -->
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container z-index-2">
+                <div class="row">
+                    <!-- Aquí controlamos el ancho de la caja y que se quede a la izquierda -->
+                    <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+                        <!-- Caja Difuminada (Glassmorphism) -->
+                        <div class="glass-box p-4 p-md-5 rounded-4 animate-on-scroll">
+                            <h1 class="display-3 mb-3 title-font text-white fw-bold">El verdadero sabor del océano</h1>
+                            <p class="lead mb-4 fw-light subtitle-font text-white">Mariscos frescos, pesca del día y coctelería de autor frente al mar.</p>
+                            <!-- El botón ahora dirige directamente a la reserva -->
+                            <a href="#contacto" class="btn btn-cta btn-lg rounded-pill px-5 shadow-lg">Reservar Mesa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -71,61 +104,57 @@
         </div>
     </section>
 
-    <!-- Sección de Menú (Estilo Lista de Restaurante) -->
+    <!-- Sección de Menú (Reducido a 4 platillos estrella) -->
     <section id="menu" class="py-5 bg-light-blue">
         <div class="container py-5">
             <div class="text-center mb-5 animate-on-scroll">
-                <h2 class="title-font fw-bold text-navy">Especialidades del Chef</h2>
+                <h2 class="title-font fw-bold text-navy">Nuestras Especialidades</h2>
                 <div class="divider mx-auto"></div>
-                <p class="text-muted mt-3">Seleccionados cuidadosamente para tu deleite.</p>
+                <p class="text-muted mt-3">Los 4 platillos insignia que debes probar en Brisa Marina.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="menu-container bg-white p-4 p-md-5 rounded-4 shadow-sm animate-on-scroll">
                         
                         <!-- Item 1 -->
-                        <div class="menu-list-item d-flex justify-content-between align-items-end mb-4">
-                            <div class="menu-info pe-3">
+                        <div class="menu-list-item d-flex align-items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1559715719-a6923c760124?auto=format&fit=crop&w=150&q=80" alt="Ceviche" class="menu-img rounded-circle me-3 d-none d-sm-block">
+                            <div class="menu-info flex-grow-1 pe-3">
                                 <h5 class="title-font fw-bold text-navy mb-1">Ceviche Clásico Peruano</h5>
                                 <p class="text-muted small mb-0 font-montserrat">Pesca del día en leche de tigre, cebolla morada, camote y maíz tostado.</p>
                             </div>
-                            <div class="menu-price text-cta fw-bold fs-5">
-                                $14.00
-                            </div>
+                            <div class="menu-price text-cta fw-bold fs-5">$14.00</div>
                         </div>
 
                         <!-- Item 2 -->
-                        <div class="menu-list-item d-flex justify-content-between align-items-end mb-4">
-                            <div class="menu-info pe-3">
+                        <div class="menu-list-item d-flex align-items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&w=150&q=80" alt="Camarones" class="menu-img rounded-circle me-3 d-none d-sm-block">
+                            <div class="menu-info flex-grow-1 pe-3">
                                 <h5 class="title-font fw-bold text-navy mb-1">Camarones al Ajillo</h5>
                                 <p class="text-muted small mb-0 font-montserrat">Camarones jumbo salteados en mantequilla clarificada, ajo rostizado y vino blanco.</p>
                             </div>
-                            <div class="menu-price text-cta fw-bold fs-5">
-                                $18.50
-                            </div>
+                            <div class="menu-price text-cta fw-bold fs-5">$18.50</div>
                         </div>
 
                         <!-- Item 3 -->
-                        <div class="menu-list-item d-flex justify-content-between align-items-end mb-4">
-                            <div class="menu-info pe-3">
+                        <div class="menu-list-item d-flex align-items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=150&q=80" alt="Pulpo" class="menu-img rounded-circle me-3 d-none d-sm-block">
+                            <div class="menu-info flex-grow-1 pe-3">
                                 <h5 class="title-font fw-bold text-navy mb-1">Pulpo a las Brasas</h5>
                                 <p class="text-muted small mb-0 font-montserrat">Tentáculos marinados en pimentón ahumado, servidos sobre papas rústicas.</p>
                             </div>
-                            <div class="menu-price text-cta fw-bold fs-5">
-                                $22.00
-                            </div>
+                            <div class="menu-price text-cta fw-bold fs-5">$22.00</div>
                         </div>
 
                         <!-- Item 4 -->
-                        <div class="menu-list-item d-flex justify-content-between align-items-end mb-4">
-                            <div class="menu-info pe-3">
-                                <h5 class="title-font fw-bold text-navy mb-1">Lomo de Salmón en Salsa de Alcaparras</h5>
-                                <p class="text-muted small mb-0 font-montserrat">Salmón fresco a la plancha bañado en salsa cremosa de alcaparras y limón.</p>
+                        <div class="menu-list-item d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1553659971-f01207815844?auto=format&fit=crop&w=150&q=80" alt="Langosta" class="menu-img rounded-circle me-3 d-none d-sm-block">
+                            <div class="menu-info flex-grow-1 pe-3">
+                                <h5 class="title-font fw-bold text-navy mb-1">Cola de Langosta a la Mantequilla</h5>
+                                <p class="text-muted small mb-0 font-montserrat">Cola de langosta caribeña horneada con mantequilla de finas hierbas y espárragos.</p>
                             </div>
-                            <div class="menu-price text-cta fw-bold fs-5">
-                                $24.00
-                            </div>
+                            <div class="menu-price text-cta fw-bold fs-5">$45.00</div>
                         </div>
 
                     </div>

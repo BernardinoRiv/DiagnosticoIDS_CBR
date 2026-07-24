@@ -1,24 +1,13 @@
-/* Variables de color de la nueva paleta */
 :root {
-    --navy: #0F2027;           /* Azul oscuro muy elegante */
-    --ocean: #0077B6;          /* Azul vibrante del mar */
-    --ocean-light: #48CAE4;    /* Acentos celestes */
-    --light-blue: #F0F8FF;     /* Fondo gris/azulado súper claro */
-    --cta-color: #FF6B6B;      /* Coral vibrante para llamados a la acción (Incentivar Clic) */
-    --cta-hover: #E63946;      
+    --navy: #0F2027;
+    --ocean: #0077B6;
+    --ocean-light: #48CAE4;
+    --light-blue: #F0F8FF;
+    --cta-color: #FF6B6B;
+    --cta-hover: #E63946;
     --text-dark: #334155;
 }
 
-/* Tipografías */
-.title-font {
-    font-family: 'Playfair Display', serif;
-}
-
-.font-montserrat, p, a, input, select, button, span {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Configuraciones generales */
 html {
     scroll-behavior: smooth;
 }
@@ -27,15 +16,34 @@ body {
     color: var(--text-dark);
 }
 
-/* Clases de colores personalizados */
+.title-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat, p, a, input, select, button, span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle-font {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
 .text-navy { color: var(--navy) !important; }
 .text-ocean { color: var(--ocean) !important; }
 .text-ocean-light { color: var(--ocean-light) !important; }
 .text-cta { color: var(--cta-color) !important; }
 .bg-navy { background-color: var(--navy) !important; }
 .bg-light-blue { background-color: var(--light-blue) !important; }
+.z-index-2 { z-index: 2; }
 
-/* Navbar */
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--ocean);
+    margin-top: 15px;
+}
+
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -53,7 +61,6 @@ body {
     color: var(--ocean) !important;
 }
 
-/* Botón de Llamado a la Acción (CTA) */
 .btn-cta {
     background-color: var(--cta-color);
     color: white;
@@ -73,46 +80,59 @@ body {
     border: 2px solid var(--navy);
     color: var(--navy);
     font-weight: 600;
+    transition: all 0.3s ease;
 }
+
 .btn-outline-navy:hover {
     background-color: var(--navy);
     color: white;
 }
 
-/* Hero Section (Fondo estático, mariscos/océano) */
-.hero {
+.hero-carousel-section {
     height: 75vh;
     min-height: 550px;
-    /* Gradiente oscuro sobre imagen de mariscos/mar para destacar el CTA */
-    background: linear-gradient(rgba(15, 32, 39, 0.65), rgba(15, 32, 39, 0.7)), 
-                url('https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 76px; 
+    margin-top: 76px;
+    overflow: hidden;
 }
 
-.subtitle-font {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+#heroCarousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+    width: 100%;
 }
 
-/* Divider debajo de títulos */
-.divider {
-    width: 60px;
-    height: 3px;
-    background-color: var(--ocean);
-    margin-top: 15px;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
-/* Menú Estilo Lista */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.hero-overlay .container {
+    pointer-events: auto;
+}
+
+.glass-box {
+    background: rgba(15, 32, 39, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
 .menu-container {
     border-top: 4px solid var(--ocean);
 }
 
 .menu-list-item {
     border-bottom: 1px dashed #cbd5e1;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 .menu-list-item:last-child {
@@ -121,25 +141,46 @@ body {
     padding-bottom: 0;
 }
 
-/* Testimonios */
+.menu-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid var(--light-blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-list-item:hover .menu-img {
+    transform: scale(1.08) rotate(3deg);
+    border-color: var(--ocean-light);
+}
+
+.menu-price {
+    transition: transform 0.3s ease;
+}
+
+.menu-list-item:hover .menu-price {
+    transform: translateX(-5px);
+}
+
 .testimonial-card {
     transition: transform 0.3s ease;
 }
+
 .testimonial-card:hover {
     transform: translateY(-5px);
 }
 
-/* Formulario */
 .form-control, .form-select {
     border: 1px solid #e2e8f0;
     background-color: #f8fafc;
 }
+
 .form-control:focus, .form-select:focus {
     border-color: var(--ocean);
     box-shadow: 0 0 0 0.25rem rgba(0, 119, 182, 0.25);
 }
 
-/* WhatsApp Flotante */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -159,25 +200,24 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
 }
+
 .whatsapp-float:hover {
     background-color: #128C7E;
     color: white;
     transform: scale(1.1);
 }
 
-/* ANIMACIONES AL HACER SCROLL (JS Observer) */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(40px); /* El elemento empieza abajo */
+    transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animate-on-scroll.is-visible {
     opacity: 1;
-    transform: translateY(0); /* Sube a su posición original */
+    transform: translateY(0);
 }
 
-/* Ajuste de scroll */
-section:not(.hero) {
+section:not(.hero-carousel-section) {
     scroll-margin-top: 76px;
 }
