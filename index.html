@@ -104,66 +104,152 @@
         </div>
     </section>
 
-    <!-- Sección de Menú (Reducido a 4 platillos estrella) -->
+ <!-- Sección de Menú (Estilo Grid de Tarjetas - 8 Platillos) -->
     <section id="menu" class="py-5 bg-light-blue">
         <div class="container py-5">
             <div class="text-center mb-5 animate-on-scroll">
                 <h2 class="title-font fw-bold text-navy">Nuestras Especialidades</h2>
                 <div class="divider mx-auto"></div>
-                <p class="text-muted mt-3">Los 4 platillos insignia que debes probar en Brisa Marina.</p>
+                <p class="text-muted mt-3">Los platillos insignia que debes probar en Brisa Marina.</p>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="menu-container bg-white p-4 p-md-5 rounded-4 shadow-sm animate-on-scroll">
-                        
-                        <!-- Item 1 -->
-                        <div class="menu-list-item d-flex align-items-center mb-4">
-                            <img src="https://images.unsplash.com/photo-1559715719-a6923c760124?auto=format&fit=crop&w=150&q=80" alt="Ceviche" class="menu-img rounded-circle me-3 d-none d-sm-block">
-                            <div class="menu-info flex-grow-1 pe-3">
-                                <h5 class="title-font fw-bold text-navy mb-1">Ceviche Clásico Peruano</h5>
+            <!-- Contenedor Grid (2 Columnas) -->
+            <div class="row g-4 justify-content-center">
+                
+                <!-- Tarjeta 1: Ceviche (Imagen corregida) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <!-- Nueva URL de imagen funcionando -->
+                            <img src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=150&q=80" alt="Ceviche" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Ceviche Clásico Peruano</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$14.00</span>
+                                </div>
                                 <p class="text-muted small mb-0 font-montserrat">Pesca del día en leche de tigre, cebolla morada, camote y maíz tostado.</p>
                             </div>
-                            <div class="menu-price text-cta fw-bold fs-5">$14.00</div>
                         </div>
-
-                        <!-- Item 2 -->
-                        <div class="menu-list-item d-flex align-items-center mb-4">
-                            <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&w=150&q=80" alt="Camarones" class="menu-img rounded-circle me-3 d-none d-sm-block">
-                            <div class="menu-info flex-grow-1 pe-3">
-                                <h5 class="title-font fw-bold text-navy mb-1">Camarones al Ajillo</h5>
-                                <p class="text-muted small mb-0 font-montserrat">Camarones jumbo salteados en mantequilla clarificada, ajo rostizado y vino blanco.</p>
-                            </div>
-                            <div class="menu-price text-cta fw-bold fs-5">$18.50</div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div class="menu-list-item d-flex align-items-center mb-4">
-                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=150&q=80" alt="Pulpo" class="menu-img rounded-circle me-3 d-none d-sm-block">
-                            <div class="menu-info flex-grow-1 pe-3">
-                                <h5 class="title-font fw-bold text-navy mb-1">Pulpo a las Brasas</h5>
-                                <p class="text-muted small mb-0 font-montserrat">Tentáculos marinados en pimentón ahumado, servidos sobre papas rústicas.</p>
-                            </div>
-                            <div class="menu-price text-cta fw-bold fs-5">$22.00</div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="menu-list-item d-flex align-items-center">
-                            <img src="https://images.unsplash.com/photo-1553659971-f01207815844?auto=format&fit=crop&w=150&q=80" alt="Langosta" class="menu-img rounded-circle me-3 d-none d-sm-block">
-                            <div class="menu-info flex-grow-1 pe-3">
-                                <h5 class="title-font fw-bold text-navy mb-1">Cola de Langosta a la Mantequilla</h5>
-                                <p class="text-muted small mb-0 font-montserrat">Cola de langosta caribeña horneada con mantequilla de finas hierbas y espárragos.</p>
-                            </div>
-                            <div class="menu-price text-cta fw-bold fs-5">$45.00</div>
-                        </div>
-
                     </div>
                 </div>
+
+                <!-- Tarjeta 2: Camarones (Estructura corregida) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&w=150&q=80" alt="Camarones" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Camarones al Ajillo</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$18.50</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Camarones jumbo salteados en mantequilla clarificada, ajo rostizado y vino blanco.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Pulpo -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=150&q=80" alt="Pulpo" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Pulpo a las Brasas</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$22.00</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Tentáculos marinados en pimentón ahumado, servidos sobre papas rústicas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Langosta -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1553659971-f01207815844?auto=format&fit=crop&w=150&q=80" alt="Langosta" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Cola de Langosta</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$45.00</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Cola de langosta caribeña horneada con mantequilla de finas hierbas y espárragos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 5: Tacos de Pescado (NUEVO) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=150&q=80" alt="Tacos de Pescado" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Tacos de Pescado Baja</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$12.50</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Tres tacos de pescado capeado con ensalada de col morada y aderezo de chipotle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6: Ostras Frescas (NUEVO) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1615887023516-9b6bcd559e87?auto=format&fit=crop&w=150&q=80" alt="Ostras" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Ostras Frescas</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$16.00</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Media docena de ostras frescas acompañadas de mignonette y limón amarillo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 7: Paella Marinera (NUEVO) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=150&q=80" alt="Paella" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Paella Marinera (2 Pax)</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$35.00</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Arroz azafranado con mejillones, almejas, calamares y langostinos frescos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 8: Filete de Pescado (NUEVO) -->
+                <div class="col-md-10 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm menu-card animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="card-body p-4 d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=150&q=80" alt="Filete de Pescado" class="menu-img-large rounded-circle me-3 shadow-sm d-none d-sm-block">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="title-font fw-bold text-navy mb-0 pe-2">Lomo de Salmón</h5>
+                                    <span class="price-badge rounded-pill fw-bold px-3 py-1">$24.00</span>
+                                </div>
+                                <p class="text-muted small mb-0 font-montserrat">Salmón fresco a la plancha bañado en salsa cremosa de alcaparras y limón.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
-            <div class="text-center mt-5 animate-on-scroll">
-                <p class="font-montserrat mb-3">¿Se te antojó algo?</p>
-                <a href="#contacto" class="btn btn-outline-navy btn-lg rounded-pill px-5">Haz tu reserva hoy</a>
+            <div class="text-center mt-5 pt-3 animate-on-scroll">
+                <p class="font-montserrat mb-3 text-muted">¿Se te antojó algo?</p>
+                <a href="#contacto" class="btn btn-cta btn-lg rounded-pill px-5 shadow">Haz tu reserva hoy</a>
             </div>
         </div>
     </section>
